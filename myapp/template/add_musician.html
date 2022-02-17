@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} <title> Musician</title> {% endblock title %}
+
+{% block body %}
+<h1>This is Add Musician page</h1>
+<br>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{musicform.as_p}}
+    <input type="submit" value="post" class="btn btn-success btn-sm">
+</form>
+{% endblock body %}

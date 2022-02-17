@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} <title>add artist</title>{% endblock title%}
+
+{% block body %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{albumform.as_p}}
+    <input type="submit" value="submit" class="btn btn-primary btn-sm">
+
+</form>
+{% endblock body %}

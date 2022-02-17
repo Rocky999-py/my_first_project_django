@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} <title>update artist details</title> {% endblock title %}
+
+{% block body %}
+{% if success %}
+<div class="alert alert-success">{{success}}</div>
+
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ark_form.as_p}}
+    <input type="submit" value="update" class="btn btn-success btn-sm">
+</form>
+{% endblock body %}

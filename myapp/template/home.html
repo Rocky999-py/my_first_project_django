@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} <title> home</title> {% endblock title %}
+
+{% block body %}
+<h1>This is home page</h1>
+<table>
+    {% for i in mp %}
+    <tr>
+        <td><a href="{% url 'list' idi=i.id %}">{{i.first_name}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock body %}
